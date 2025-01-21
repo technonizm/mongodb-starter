@@ -1,19 +1,18 @@
-import Meta, { defaultMetaProps } from '@/components/layout/meta';
-export { getStaticProps } from '.';
+import Meta from '@/components/layout/meta';
 
 export default function Custom500() {
   return (
-    <div className="h-screen w-full flex justify-center items-center bg-black">
-      <Meta
-        props={{
-          ...defaultMetaProps,
-          title: '500 | MongoDB Starter Kit',
-          ogUrl: 'https://mongodb.vercel.app/500'
-        }}
-      />
-      <h1 className="text-2xl font-light text-white">
-        500 <span className="mx-3 text-4xl">|</span> Internal Server Occured
-      </h1>
-    </div>
+    <>
+      <Meta props={{
+        title: "500 – Sunucu Hatası",
+        description: "Sunucu hatası oluştu",
+        ogUrl: "https://your-site.com/500",
+        ogImage: "https://your-site.com/og-image.jpg"
+      }} />
+      <div className="flex flex-col items-center justify-center min-h-screen text-center">
+        <h1 className="text-4xl font-bold">500</h1>
+        <p className="mt-4">Sunucu hatası oluştu. Lütfen daha sonra tekrar deneyin.</p>
+      </div>
+    </>
   );
 }
