@@ -1,19 +1,28 @@
 import Meta, { defaultMetaProps } from '@/components/layout/meta';
-export { getStaticProps } from '.';
+
+// Bu satırı kaldırın:
+// export { getStaticProps } from '.';
+
+// Gerekiyorsa, getStaticProps'u direkt burada tanımlayın:
+export async function getStaticProps() {
+  return {
+    props: {
+      meta: {
+        ...defaultMetaProps,
+        title: '404 – Sayfa Bulunamadı'
+      }
+    }
+  };
+}
 
 export default function Custom404() {
   return (
-    <div className="h-screen w-full flex justify-center items-center bg-black">
-      <Meta
-        props={{
-          ...defaultMetaProps,
-          title: '404 | MongoDB Starter Kit',
-          ogUrl: 'https://mongodb.vercel.app/404'
-        }}
-      />
-      <h1 className="text-2xl font-light text-white">
-        404 <span className="mx-3 text-4xl">|</span> User Not Found
-      </h1>
-    </div>
+    <>
+      <Meta title="404 – Sayfa Bulunamadı" />
+      <div className="flex flex-col items-center justify-center min-h-screen text-center">
+        <h1 className="text-4xl font-bold">404</h1>
+        <p className="mt-4">Aradığınız sayfa bulunamadı.</p>
+      </div>
+    </>
   );
 }
