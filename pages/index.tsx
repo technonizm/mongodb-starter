@@ -29,14 +29,21 @@ export default function Home() {
           <button className="add-button">+ Yeni Kart Ekle</button>
           <div className="card-list">
             <div className="card-item">
-              <img src="/placeholder.jpg" alt="Kart" />
+              <img src="https://via.placeholder.com/100x140" alt="Kart" />
               <div className="card-info">
                 <h3>Örnek Kart 1</h3>
                 <p>Adet: 3</p>
                 <button className="contact-button">İletişime Geç</button>
               </div>
             </div>
-            {/* Daha fazla kart buraya eklenebilir */}
+            <div className="card-item">
+              <img src="https://via.placeholder.com/100x140" alt="Kart" />
+              <div className="card-info">
+                <h3>Örnek Kart 2</h3>
+                <p>Adet: 1</p>
+                <button className="contact-button">İletişime Geç</button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -46,7 +53,7 @@ export default function Home() {
           <button className="add-button">+ Aradığın Kartı Ekle</button>
           <div className="card-list">
             <div className="card-item">
-              <img src="/placeholder.jpg" alt="Kart" />
+              <img src="https://via.placeholder.com/100x140" alt="Kart" />
               <div className="card-info">
                 <h3>Örnek Aranan Kart</h3>
                 <p>İstenen Adet: 2</p>
