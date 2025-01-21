@@ -1,19 +1,4 @@
-import Meta, { defaultMetaProps } from '@/components/layout/meta';
-
-// Bu satırı kaldırın:
-// export { getStaticProps } from '.';
-
-// Gerekiyorsa, getStaticProps'u direkt burada tanımlayın:
-export async function getStaticProps() {
-  return {
-    props: {
-      meta: {
-        ...defaultMetaProps,
-        title: '404 – Sayfa Bulunamadı'
-      }
-    }
-  };
-}
+import Meta from '@/components/layout/meta';
 
 export default function Custom404() {
   return (
